@@ -1,6 +1,5 @@
 const mysql = require("think-model-mysql");
 const isDev = think.env === 'development';
-console.log("isDev =>", isDev);
 
 module.exports = {
   handle: mysql,
