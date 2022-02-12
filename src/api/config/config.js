@@ -5,6 +5,7 @@ module.exports = {
     // 格式为controller
     'index',
     'catalog',
+    'ad',
     'topic',
     'auth',
     'goods',
