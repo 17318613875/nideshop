@@ -99,4 +99,22 @@ module.exports = class extends Base {
       fileUrl: "http://127.0.0.1:8360" + filename,
     });
   }
+
+  async assessmentThumbAction() {
+    const imageFile = this.file("assessment_pic_url");
+    if (think.isEmpty(imageFile)) {
+      return this.fail("保存失败");
+    }
+    const that = this;
+    const filename = "/static/upload/assessment/" + think.uuid(32) + ".jpg";
+
+    const is = fs.createReadStream(imageFile.path);
+    const os = fs.createWriteStream(think.ROOT_PATH + "/www" + filename);
+    is.pipe(os);
+
+    return that.success({
+      name: "assessment_pic_url",
+      fileUrl: "http://127.0.0.1:8360" + filename,
+    });
+  }
 };

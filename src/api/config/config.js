@@ -6,6 +6,7 @@ module.exports = {
     'index',
     'catalog',
     'ad',
+    'assessment',
     'topic',
     'auth',
     'goods',
