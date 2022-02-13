@@ -7,6 +7,7 @@ module.exports = {
     'catalog',
     'ad',
     'assessment',
+    'classes',
     'topic',
     'auth',
     'goods',
